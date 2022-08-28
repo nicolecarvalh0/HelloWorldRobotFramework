@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220828 16:45:40.315" rpa="false" schemaversion="3">
+<suite id="s1" name="Title" source="C:\qaninja\robotframework\selenium_e_robot_framework\title.robot">
+<test id="s1-t1" name="Deve validar o título da página inicial" line="6">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://training-wheels-protocol.herokuapp.com/</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220828 16:45:40.698" level="INFO">Opening browser 'firefox' to base url 'https://training-wheels-protocol.herokuapp.com/'.</msg>
+<msg timestamp="20220828 16:45:40.734" level="INFO">Firefox driver log is always forced to to: C:\qaninja\robotframework\selenium_e_robot_framework\geckodriver-1.log</msg>
+<msg timestamp="20220828 16:45:40.804" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220828 16:45:40.805" level="FAIL">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</msg>
+<status status="FAIL" starttime="20220828 16:45:40.698" endtime="20220828 16:45:40.885"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Training Wheels Protocol</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" starttime="20220828 16:45:40.886" endtime="20220828 16:45:40.886"/>
+</kw>
+<status status="FAIL" starttime="20220828 16:45:40.696" endtime="20220828 16:45:40.886">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<status status="FAIL" starttime="20220828 16:45:40.317" endtime="20220828 16:45:40.889"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Title">Title</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
