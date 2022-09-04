@@ -1,6 +1,6 @@
 # Importando a biblioteca do Selenium 
 *** Settings ***
-Library         SeleniumLibrary
+Resource     base.robot
 
 #Antes de cada caso de teste ocorrerá
 Test Setup      Nova sessão
@@ -9,7 +9,6 @@ Test Setup      Nova sessão
 Test Teardown   Encerra sessão
 
 *** Variables ***
-${url}                       https://training-wheels-protocol.herokuapp.com
 ${check_thor}                id:thor
 ${check_ironman}             css:input[value='iron-man']
 ${check_blackpanther}        xpath://*[@id='checkboxes']/input[7]
@@ -34,10 +33,3 @@ Deve validar marcação do checkbox "Pantera Negra" através do Xpath
     Select Checkbox                 ${check_blackpanther}
     checkbox Should Be Selected     ${check_blackpanther}
     Sleep                           5
-
-*** Keywords ***
-Nova sessão
-    Open Browser                    ${url}     Chrome
-
-Encerra sessão
-    Close Browser

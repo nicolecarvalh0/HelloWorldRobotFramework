@@ -1,9 +1,14 @@
-# Importando a biblioteca do Selenium 
+# Importando o arquivo base
 *** Settings ***
-Library     SeleniumLibrary
+Resource     base.robot
+
+#Antes de cada caso de teste ocorrerá
+Test Setup      Nova sessão
+
+#Após cada caso de teste ocorrerá
+Test Teardown   Encerra sessão
 
 *** Test Cases ***
 Deve validar o título da página inicial
-    Open Browser    https://training-wheels-protocol.herokuapp.com/     Chrome
     Title Should Be     Training Wheels Protocol
     Close Browser
